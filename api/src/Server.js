@@ -2,6 +2,8 @@ import express from 'express'
 import { graphqlHTTP } from 'express-graphql'
 import { createComplexityRule } from 'graphql-query-complexity'
 
+import cors from 'cors'
+
 // https://github.com/slicknode/graphql-query-complexity/issues/65
 function simpleEstimator({ defaultComplexity = 1 }) {
   return (args) => {
@@ -16,6 +18,9 @@ export function Server({
   context = {},
 }) {
   const server = express()
+
+  // TODO: remove/modify - added for local development testing only
+  server.use(cors())
 
   server.use(
     '/',

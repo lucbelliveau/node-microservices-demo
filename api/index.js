@@ -3,6 +3,7 @@ import postgres from 'postgres'
 import { Server } from './src/Server.js'
 import { schema } from './src/schema.js'
 
+
 const {
   PORT = 3000,
   HOST = '0.0.0.0',
@@ -31,6 +32,6 @@ process.on('SIGINT', () => process.exit(0))
     context: { sql },
   })
   server.listen({ port: PORT, host: HOST }, () =>
-    console.log(`🚀 Node-demo listening on ${HOST}:${PORT}`),
+    console.log(`🚀 API-demo listening on ${HOST}:${PORT}`),
   )
 })()

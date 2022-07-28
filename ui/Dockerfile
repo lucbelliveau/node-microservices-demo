@@ -2,7 +2,7 @@ FROM node:18.3.0-alpine3.15 AS builder
 
 COPY . /ui
 WORKDIR /ui
-RUN npm i && npm run build
+RUN npm i --production && npm run build
 
 FROM node:18.3.0-alpine3.15
 

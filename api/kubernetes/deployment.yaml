@@ -27,7 +27,9 @@ spec:
               key: DB_URL
         resources: {}
       containers:
-      - image: northamerica-northeast1-docker.pkg.dev/node-microservices-demo/microservices-demo/api:latest
+      # - image: northamerica-northeast1-docker.pkg.dev/node-microservices-demo/microservices-demo/api:latest
+      - image: phac-api
+        imagePullPolicy: Never
         name: api
         env:
         - name: DB_USER

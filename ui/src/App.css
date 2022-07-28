@@ -1,5 +1,16 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+ 
+}
+
+main {
+  padding: 20px;
+}
+
+pre {
+  background: #eee;
+  border: 1px dotted #444;
+  padding: 5px;
 }
 
 .App-header {
@@ -10,6 +21,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-bottom: 20px;
 }
 
 .App-link {
@@ -17,5 +29,5 @@
 }
 
 li {
-  list-style: none;
+  /* list-style: none; */
 }
